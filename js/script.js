@@ -44,17 +44,17 @@ document.body.addEventListener("click", (event) => {
 
 // Акордіон
 
-const acordion_btns = document.querySelectorAll("main .faq .content_faq .question .button");
+const acordion_btns = document.querySelectorAll("main .faq .content_faq .question .button div");
 const acordion_ansvers = document.querySelectorAll("main .faq .content_faq .question");
 
 acordion_btns.forEach((btn) => {
     btn.addEventListener("click", (event) => {
-        if (!btn.parentElement.classList.contains("show_answer")) {
+        if (!btn.parentElement.parentElement.classList.contains("show_answer")) {
             acordion_ansvers.forEach(ansver => {
                 ansver.classList.remove("show_answer")
             });
         }
-        btn.parentElement.classList.toggle("show_answer")
+        btn.parentElement.parentElement.classList.toggle("show_answer")
     })
 })
 

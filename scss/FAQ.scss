@@ -1,0 +1,228 @@
+@import './technical/none';
+@import './technical/fonts';
+
+@import './header';
+@import './form';
+@import './footer';
+
+.FAQ {
+    .main_content {
+        background-image: url(../image/svg/bg_page/refresh-white.svg);
+        background-position-y: -20px;
+        background-position-x: center;
+        background-size: clamp(50rem, 36rem + 70vw, 120rem);
+        background-repeat: no-repeat;
+        padding-top: clamp(5.75rem, -0.821rem + 10.27vw, 11.5rem);
+        .title_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: clamp(32.5rem, -30.357rem + 98.21vw, 87.5rem);
+            margin: 0 auto;
+            margin-bottom: clamp(4.25rem, 2.763rem + 7.44vw, 11.688rem);
+
+            .title_faq {
+                position: relative;
+                width: fit-content;
+
+                img {
+                    position: absolute;
+
+                    &:first-child {
+                        width: clamp(0.35rem, 0.282rem + 0.34vw, 0.688rem);
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &:last-child {
+                        width: clamp(1.625rem, 1.287rem + 1.69vw, 3.313rem);
+                        right: 0;
+                    }
+                }
+
+                h2 {
+                    font-family: $SpriteGraffitiRegular;
+                    font-size: clamp(4.834rem, -2.356rem + 11.23vw, 11.125rem);
+                }
+            }
+
+            .sub_title_faq {
+                display: flex;
+                align-items: center;
+                img {
+                    width: clamp(6.188rem, 0.688rem + 8.59vw, 11rem);
+                }
+            }
+        }
+        .questions {
+            width: clamp(61.875rem, 32.589rem + 45.76vw, 87.5rem);
+            margin: 0 auto;
+
+            .question {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: clamp(0.898rem, 0.496rem + 0.63vw, 1.25rem);
+                border: 1px solid #EEE;
+                background: linear-gradient(90deg, rgb(241, 240, 240) 0%, rgba(255, 255, 255, 1) 100%);
+                background-repeat: no-repeat;
+                backdrop-filter: blur(4px);
+                padding-top: clamp(0.688rem, 0.045rem + 1vw, 1.25rem);
+                padding-left: clamp(1.375rem, 0.089rem + 2.01vw, 2.5rem);
+                padding-right: clamp(1.375rem, 0.089rem + 2.01vw, 2.5rem);
+                padding-bottom: clamp(0.688rem, 0.045rem + 1vw, 1.25rem);
+                margin-bottom: clamp(1rem, 0.714rem + 0.45vw, 1.25rem);
+
+                .text {
+                    .title {
+                        width: clamp(37.5rem, 23.214rem + 22.32vw, 50rem);
+    
+                        p {
+                            color: #151515;
+                            font-family: $Onest;
+                            font-size: clamp(0.875rem, 0.675rem + 1vw, 1.875rem);
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                            text-transform: uppercase;
+    
+                            span {
+                                color: #ED2A07;
+                            }
+                        }
+                    }
+    
+                    .answer {
+                        width: clamp(37.5rem, 23.214rem + 22.32vw, 50rem);
+                        display: none;
+    
+                        p {}
+                    }
+                }
+
+
+                .button {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        p {
+                            color: #151515;
+                            font-family: $Onest;
+                            font-size: clamp(1rem, 0.527rem + 0.74vw, 1.414rem);
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;
+                            margin-right: clamp(0.875rem, 0.446rem + 0.67vw, 1.25rem);
+                        }
+
+                        svg {
+                            width: clamp(1.5rem, 0.929rem + 0.89vw, 2rem);
+                        }
+                    }
+                }
+            }
+            .show_answer {
+                align-items: flex-end;
+                background: #151515;
+                padding: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
+                padding-bottom: clamp(1rem, 0.2rem + 4vw, 5rem);
+                .text {
+                    .title {
+                        margin-bottom: clamp(0.938rem, 0.58rem + 0.56vw, 1.25rem);
+    
+                        p {
+                            color: #FFF;
+                        }
+                    }
+    
+                    .answer {
+                        display: block;
+                        padding-left: clamp(0.625rem, 0.375rem + 1.25vw, 1.875rem);
+                        p {
+                            color: #888;
+                            font-family: $Onest;
+                            font-size: clamp(0.813rem, 0.455rem + 0.56vw, 1.125rem);
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                .button {
+
+                    div {
+                        p {
+                            color: #ED2A07;
+                        }
+
+                        svg {
+                            transform: rotateZ(90deg);
+                            stroke: #ff0000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact_form {
+        margin-bottom: clamp(9.063rem, -3.438rem + 19.53vw, 20rem);
+    }
+}
+
+@media (max-width: 1020px) {
+    .FAQ {
+        .main_content {
+            padding-top: clamp(2.938rem, 1.659rem + 6.39vw, 5.75rem);
+            .title_container {
+                width: clamp(16.875rem, 9.773rem + 35.51vw, 32.5rem);
+                .title_faq {
+                    h2 {
+                        font-size: clamp(3.25rem, 2.54rem + 3.55vw, 4.813rem);
+                    }
+                }
+                .sub_title_faq {
+                    img {
+                        
+                    }
+                }
+            }
+            .questions {
+                width: clamp(18rem, -1.943rem + 99.72vw, 61.875rem);
+                .question {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-bottom: clamp(0.5rem, 0.273rem + 1.14vw, 1rem);
+                    .text {
+                        .title {
+                            width: clamp(16.125rem, 6.409rem + 48.58vw, 37.5rem);
+                            margin-bottom: 16px;
+        
+                            p {
+                                span {
+                                }
+                            }
+                        }
+        
+                        .answer {
+                            width: clamp(16.125rem, 6.409rem + 48.58vw, 37.5rem);
+                            margin-bottom: 16px;
+                            p {}
+                        }
+                    }
+                    .button {
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+        .contact_form {
+            margin-bottom: clamp(6.5rem, 5.335rem + 5.82vw, 9.063rem);
+        }
+    }
+}

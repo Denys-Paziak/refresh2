@@ -819,8 +819,6 @@ main {
     }
 
 
-
-
     .result {
         padding-bottom: 104px;
 
@@ -957,11 +955,13 @@ main {
                     height: 72px;
                     gap: 20px;
 
-                    button {
+                    button, a {
                         display: flex;
                         align-items: center;
                         gap: 20px;
                     }
+
+                   
 
                     img {
                         width: 32px;
@@ -974,7 +974,7 @@ main {
                     }
                 }
 
-                .swiper-slide .buttons button {
+                .swiper-slide .buttons button, a {
                     background: #fff;
                     color: #000;
                     padding: 20px 30px;
@@ -1060,7 +1060,7 @@ main {
             }
         }
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1020px) {
             .limit {
                 width: clamp(18rem, -2rem + 100vw, 62rem);
             }
@@ -1076,7 +1076,7 @@ main {
         }
 
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1020px) {
 
             .title_result {
 
@@ -1133,11 +1133,12 @@ main {
                             height: auto;
                             gap: 8px;
 
-                            button {
+                            button, a {
                                 justify-content: center;
                                 height: 48px;
                                 width: 90%;
                                 margin: 0 auto;
+                                font-size: 16px;
                             }
                         }
                     }
@@ -1170,9 +1171,6 @@ main {
             }
         }
     }
-
-
-
 
 
     .price {
@@ -1909,20 +1907,24 @@ main {
                     .button {
                         display: flex;
                         align-items: center;
-                        cursor: pointer;
 
-                        p {
-                            color: #151515;
-                            font-family: $Onest;
-                            font-size: clamp(1rem, 0.527rem + 0.74vw, 1.414rem);
-                            font-style: normal;
-                            font-weight: 600;
-                            line-height: normal;
-                            margin-right: clamp(0.875rem, 0.446rem + 0.67vw, 1.25rem);
-                        }
-
-                        svg {
-                            width: clamp(1.5rem, 0.929rem + 0.89vw, 2rem);
+                        div {
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            p {
+                                color: #151515;
+                                font-family: $Onest;
+                                font-size: clamp(1rem, 0.527rem + 0.74vw, 1.414rem);
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;
+                                margin-right: clamp(0.875rem, 0.446rem + 0.67vw, 1.25rem);
+                            }
+    
+                            svg {
+                                width: clamp(1.5rem, 0.929rem + 0.89vw, 2rem);
+                            }
                         }
                     }
                 }
@@ -1954,13 +1956,15 @@ main {
 
                     .button {
 
-                        p {
-                            color: #ED2A07;
-                        }
-
-                        svg {
-                            transform: rotateZ(90deg);
-                            stroke: #ff0000;
+                        div {
+                            p {
+                                color: #ED2A07;
+                            }
+    
+                            svg {
+                                transform: rotateZ(90deg);
+                                stroke: #ff0000;
+                            }
                         }
                     }
                 }
@@ -2371,6 +2375,9 @@ main {
                         flex-direction: column;
 
                         .descr {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
                             margin-bottom: 16px;
 
                             h4 {
@@ -2683,16 +2690,6 @@ main {
                         .button {
                             display: flex;
                             justify-content: flex-end;
-                        }
-                    }
-
-                    .show_answer {
-                        .title {
-                            p {}
-                        }
-
-                        .answer {
-                            p {}
                         }
                     }
                 }
