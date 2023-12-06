@@ -1,0 +1,22 @@
+// Підключення ===============================================================================================
+// SpriteGraffiti-Regular
+@font-face {
+    font-family: 'SpriteGraffiti-Regular'; // Назва шрифта
+    src: url('../fonts/SpriteGraffiti/SpriteGraffiti-Regular.otf') format('opentype'); // Шлях 
+    font-weight: normal; // Вага шрифта
+    font-style: normal; // Стиль шрифта
+}
+@font-face {
+    font-family: 'SpriteGraffiti-Shadow'; // Назва шрифта
+    src: url('../fonts/SpriteGraffiti/SpriteGraffiti-Shadow.otf') format('opentype'); // Шлях 
+    font-weight: normal; // Вага шрифта
+    font-style: normal; // Стиль шрифта
+}
+// Onest
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&family=Poppins:wght@200;400;500;700&display=swap');
+//============================================================================================================
+// Зміннні ================================================================================================
+$SpriteGraffitiRegular: 'SpriteGraffiti-Regular';
+$SpriteGraffitiShadow: 'SpriteGraffiti-Shadow';
+$Onest: 'Onest', sans-serif;
+//============================================================================================================

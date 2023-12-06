@@ -1,0 +1,317 @@
+.modal {
+    align-items: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(21, 21, 21, 0.97);
+    z-index: 100;
+    .step_one, .step_two {
+        position: relative;
+        width: clamp(61.875rem, 32.589rem + 45.76vw, 87.5rem);
+        border-radius: clamp(1.5rem, 1.231rem + 0.42vw, 1.735rem);
+        border: 1.211px solid #252525;
+        background: #151515;
+        box-shadow: 0px 0px 40px 0px rgba(51, 51, 51, 0.30);
+        margin: 0 auto;
+    }
+
+    .step_one {
+        padding: clamp(4.688rem, 2.473rem + 3.46vw, 6.625rem) 0 clamp(6.813rem, 4.098rem + 4.24vw, 9.188rem);
+        .cross {
+            cursor: pointer;
+            position: absolute;
+            right: clamp(2rem, 1.429rem + 0.89vw, 2.5rem);
+            top: clamp(2rem, 1.429rem + 0.89vw, 2.5rem);
+        }
+        .title_form {
+            position: relative;
+            width: fit-content;
+            margin: 0 auto;
+            margin-bottom: clamp(3.313rem, 2.313rem + 1.56vw, 4.188rem);
+            .shadow {
+                overflow: hidden;
+                position: absolute;
+                background: linear-gradient(270deg, #ed2a0700 -0.39%, #ED2A07 100.34%);
+                background-clip: text;
+                filter: blur(clamp(0.094rem, 0.05rem + 0.22vw, 0.313rem));
+                font-family: $SpriteGraffitiRegular;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: clamp(5.313rem, 2.813rem + 3.91vw, 7.5rem);
+                transform: rotate(-3deg);
+                z-index: 2;
+                bottom: clamp(0.469rem, 0.25rem + 1.09vw, 1.563rem);
+            }
+            h2 {
+                position: relative;
+                z-index: 4;
+                color: white;
+                font-family: $SpriteGraffitiRegular;
+                font-size: clamp(5.313rem, 2.813rem + 3.91vw, 7.5rem);
+            }
+            .small {
+                display: none;
+            }
+        }
+        form {
+            margin: 0 auto;
+            width: clamp(45.25rem, 24.107rem + 33.04vw, 63.75rem);
+            .inputs {
+                display: flex;
+                gap: clamp(1rem, 0.714rem + 0.45vw, 1.25rem);
+                margin-bottom: clamp(2rem, 3.13vw, 3.75rem);
+                input {
+                    border-radius: 12px;
+                    border: 2px solid #666;
+                    background: #252525;
+                    box-shadow: 0px 0px 20px 0px rgba(34, 34, 34, 0.20);
+                    padding: clamp(0.875rem, 0.446rem + 0.67vw, 1.25rem) clamp(1.375rem, 0.804rem + 0.89vw, 1.875rem);
+                    color: #ffffff;
+                    font-family: $Onest;
+                    font-size: clamp(1rem, 0.527rem + 0.74vw, 1.414rem);
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+                .name {
+                    width: 40%;
+                }
+                .phone {
+                    width: 60%;
+                }
+            }
+            .actions {
+                display: flex;
+                align-items: center;
+                .back {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8.527px;
+                    border: 0.711px solid #333;
+                    background: #333;
+                    box-shadow: 0px 0px 14.212px 0px rgba(34, 34, 34, 0.20);
+                    color: #FFF;
+                    font-family: $Onest;
+                    font-size: clamp(1rem, 0.527rem + 0.74vw, 1.414rem);
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    padding: clamp(1rem, 0.571rem + 0.67vw, 1.375rem) clamp(1.875rem, 1.161rem + 1.12vw, 2.5rem);
+                    margin-right: clamp(1rem, 0.714rem + 0.45vw, 1.25rem);
+                }
+                .send {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8.527px;
+                    border: 1px solid #F1F1F1;
+                    background: #FAFAFA;
+                    box-shadow: 0px 0px 20px 0px rgba(34, 34, 34, 0.20);
+                    padding: clamp(0.875rem, 0.446rem + 0.67vw, 1.25rem) clamp(1.875rem, 1.161rem + 1.12vw, 2.5rem);
+                    margin-right: clamp(1.75rem, 0.893rem + 1.34vw, 2.5rem);
+                    p {
+                        color: #151515;
+                        font-family: $Onest;
+                        font-size: clamp(1rem, 0.527rem + 0.74vw, 1.414rem);
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin-right: 10px;
+                    }
+                    img {
+                        width: clamp(1.5rem, 0.929rem + 0.89vw, 2rem);
+                    }
+                }
+                .policy {
+                    width: clamp(13.75rem, 7.321rem + 10.04vw, 19.375rem);
+                    color: #888;
+                    font-family: $Onest;
+                    font-size: clamp(0.813rem, 0.455rem + 0.56vw, 1.125rem);
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .modal_ico {
+            position: absolute;
+            width: clamp(8.188rem, 4.402rem + 5.92vw, 11.5rem);
+            right: clamp(3.875rem, 2.018rem + 2.9vw, 5.5rem);
+            bottom: clamp(1.688rem, 0.902rem + 1.23vw, 2.375rem);
+        }
+    }
+    .step_two {
+        display: none;
+        flex-direction: column;
+        padding: clamp(2.625rem, 0.411rem + 3.46vw, 4.563rem) 0 clamp(3rem, 1rem + 3.13vw, 4.75rem);
+        .cross {
+            cursor: pointer;
+            position: absolute;
+            right: clamp(2rem, 1.429rem + 0.89vw, 2.5rem);
+            top: clamp(2rem, 1.429rem + 0.89vw, 2.5rem);
+        }
+        .success_ico {
+            width: clamp(10rem, 8.286rem + 2.68vw, 11.5rem);
+            margin: 0 auto;
+            margin-bottom: clamp(1.688rem, 1.473rem + 0.33vw, 1.875rem);
+        }
+        .title_form {
+            position: relative;
+            width: fit-content;
+            margin: 0 auto;
+            margin-bottom: clamp(1rem, -0.714rem + 2.68vw, 2.5rem);
+            .shadow {
+                overflow: hidden;
+                position: absolute;
+                background: linear-gradient(270deg, #ed2a0700 -0.39%, #ED2A07 100.34%);
+                background-clip: text;
+                filter: blur(clamp(0.094rem, 0.05rem + 0.22vw, 0.313rem));
+                font-family: $SpriteGraffitiRegular;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: clamp(5.313rem, 2.813rem + 3.91vw, 7.5rem);
+                transform: rotate(-3deg);
+                z-index: 2;
+                bottom: clamp(0.469rem, 0.25rem + 1.09vw, 1.563rem);
+            }
+            h2 {
+                position: relative;
+                z-index: 4;
+                color: white;
+                font-family: $SpriteGraffitiRegular;
+                font-size: clamp(5.313rem, 2.813rem + 3.91vw, 7.5rem);
+            }
+            .small {
+                display: none;
+            }
+        }
+        >p {
+            color: #888;
+            text-align: center;
+            font-family: $Onest;
+            font-size: clamp(1.375rem, 0.804rem + 0.89vw, 1.875rem);
+            font-style: normal;
+            font-weight: 700;
+            line-height: clamp(1.875rem, 0.446rem + 2.23vw, 3.125rem);
+            text-transform: uppercase;
+            
+        }
+    }
+}
+
+.show_modal {
+    display: flex;
+}
+
+.show_step_two {
+    .step_one {
+        display: none;
+    }
+    .step_two {
+        display: flex;   
+    }
+}
+
+@media (max-width: 1020px) {
+    .modal {
+        .step_one {
+            width: clamp(18rem, -1.943rem + 99.72vw, 61.875rem);
+            padding: clamp(4.688rem, 2.473rem + 3.46vw, 6.625rem) 0 clamp(1.938rem, -0.278rem + 11.08vw, 6.813rem);
+            .cross {
+                display: none;
+            }
+            .title_form {
+                margin-bottom: clamp(2rem, 1.403rem + 2.98vw, 3.313rem);
+                text-align: center;
+                .shadow {
+                    font-size: clamp(2.375rem, 1.04rem + 6.68vw, 5.313rem);
+                }
+                h2 {
+                    font-size: clamp(2.375rem, 1.04rem + 6.68vw, 5.313rem);
+                }
+                .small {
+                    display: block;
+                }
+            }
+            form {
+                width: clamp(16rem, 2.705rem + 66.48vw, 45.25rem);
+                .inputs {
+                    flex-direction: column;
+                    gap: clamp(0.5rem, 0.273rem + 1.14vw, 1rem);
+                    margin-bottom: clamp(1rem, 0.545rem + 2.27vw, 2rem);
+                    .name {
+                        width: 100%;
+                    }
+                    .phone {
+                        width: 100%;
+                    }
+                }
+                .actions {
+                    flex-direction: column;
+                    .back {
+                        margin: 0;
+                        width: 100%;
+                        order: 2;
+                        margin-bottom: 28px;
+                    }
+                    .send {
+                        margin: 0;
+                        width: 100%;
+                        order: 1;
+                        margin-bottom: clamp(0.5rem, 0.273rem + 1.14vw, 1rem);
+                    }
+                    .policy {
+                        text-align: center;
+                        order: 3;
+                    }
+                }
+            }
+            .modal_ico {
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: 0;
+                transform: translateY(-50%);
+                width: clamp(5.688rem, 4.551rem + 5.68vw, 8.188rem);
+            }
+        }
+        .step_two  {
+            padding-top: clamp(4.063rem, 3.636rem + 2.13vw, 5rem);
+            .cross {
+                display: none;
+            }
+            .success_ico {
+                position: absolute;
+                width: clamp(7rem, 5.636rem + 6.82vw, 10rem);
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: 0;
+                transform: translateY(-50%);
+            }
+            .title_form {
+                .shadow {
+                    font-size: clamp(2.375rem, 1.04rem + 6.68vw, 5.313rem);
+                }
+                h2 {
+                    font-size: clamp(2.375rem, 1.04rem + 6.68vw, 5.313rem);
+                }
+            }
+            >p {
+                margin: 0 auto;
+                width: clamp(16rem, 6.114rem + 49.43vw, 37.75rem);
+                font-size: clamp(0.875rem, 0.648rem + 1.14vw, 1.375rem);
+                line-height: clamp(1.25rem, 0.966rem + 1.42vw, 1.875rem);
+            }
+        }
+    }
+}
