@@ -158,3 +158,46 @@ function updateSlideText() {
 document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentIndex);
 });
+
+const imageSlider = document.querySelector('.imageSlider');
+const imageSliderSlide = imageSlider.querySelectorAll('.slide');
+const imageSliderLength = imageSliderSlide.length;
+
+const imageSliderNextBut = imageSlider.querySelector('.butNext');
+const imageSliderPrevBut = imageSlider.querySelector('.butPrev');
+const imageSliderPagination = imageSlider.querySelectorAll('.pagination > div');
+
+let imageSliderSlideActive = 0;
+
+
+const imageSliderShowSlides = (activeSlide) => {
+    imageSliderSlide.forEach(el => {
+        el.style.display = "none";
+    });
+
+    imageSliderPagination.forEach(el => {
+        el.classList.remove("active");
+    });
+
+
+    imageSliderPagination[activeSlide].classList.add("active");
+    imageSliderSlide[activeSlide].style.display = "block";
+}
+
+const imageSliderNext = () => {
+    if (imageSliderSlideActive < imageSliderLength - 1) {
+        imageSliderSlideActive += 1;
+        imageSliderShowSlides(imageSliderSlideActive);
+    }
+}
+const imageSliderPrev = () => {
+    if (imageSliderSlideActive > 0) {
+        imageSliderSlideActive -= 1;
+        imageSliderShowSlides(imageSliderSlideActive);
+    }
+}
+
+imageSliderNextBut.addEventListener("click", imageSliderNext);
+imageSliderPrevBut.addEventListener("click", imageSliderPrev);
+
+imageSliderShowSlides(imageSliderSlideActive);
